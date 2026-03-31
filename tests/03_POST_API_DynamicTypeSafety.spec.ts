@@ -1,7 +1,7 @@
 //import { test, expect } from "../src/fixtures/fixtures";
 import { test, expect } from '@playwright/test';
 import { formatAPIRequest, getPOSTAPIRequestBody } from "../src/utils/APIHelper";
-import { Book } from "../src/interface/BookCreateAPI.interface";
+//import { Book } from "../src/interface/BookCreateAPI.interface";
 import { faker } from "@faker-js/faker";
 
 test.use({
