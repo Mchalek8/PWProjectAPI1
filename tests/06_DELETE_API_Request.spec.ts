@@ -7,7 +7,7 @@ test.use({
     baseURL: process.env.BASE_API_URL,
 })
 
-test("POST API Request using dynamic file with faker", async ({ request }) => {
+test("POST API Request using dynamic file with faker", {tag : ['@API', '@DELETE']}, async ({ request }) => {
 
     console.log('POST API Request using dynamic file with faker');
 
