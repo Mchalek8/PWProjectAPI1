@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test("Mock API from HAR file in Playwright", async ({ page }) => {
+test("Mock API from HAR file in Playwright", {tag: ['@mock']}, async ({ page }) => {
     // Recording HAR file
     await page.routeFromHAR('./har/fruits.har', {
         url: '*/**/api/v1/fruits',

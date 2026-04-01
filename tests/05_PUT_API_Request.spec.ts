@@ -6,7 +6,7 @@ test.use({
     baseURL: process.env.BASE_API_URL,
 })
 
-test("POST API Request using dynamic file with faker", {tag : ['@API', '@PUT']}, async ({ request }) => {
+test("POST API Request using dynamic file with faker", {tag :['@sanity', '@put']}, async ({ request }) => {
 
     // Request Body values
     const id = faker.number.int({ min: 101, max: 9999 });
