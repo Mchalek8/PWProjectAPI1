@@ -68,7 +68,7 @@ test("POST API Request using dynamic file with faker", {tag :['@sanity', '@get']
     console.log('GET API Response with params CATEGORY:'+JSON.stringify(jsonGETAPIResponseParamCategory, null, 2));
 
     // Validate GET API Response
-    expect(getAPIResponseParamId.status()).toBe(201);
+    expect(getAPIResponseParamId.status()).toBe(200);
     expect(getAPIResponseParamId.statusText()).toBe('OK');
     expect(getAPIResponseParamId.headers()['content-type']).toContain('application/json');
     expect(jsonGETAPIResponseParam[0].category).toBe(category);
