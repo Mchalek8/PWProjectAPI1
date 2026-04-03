@@ -1,0 +1,96 @@
+GET API Response:[
+  {
+    "id": 6752,
+    "author": "Darrin Feil-Stamm",
+    "category": "Drama",
+    "price": 632,
+    "title": "The Adventures of Huckleberry Finn"
+  }
+]
+PUT API Response:{
+  "_request": {
+    "_type": "APIRequestContext",
+    "_guid": "request-context@9323e9f17b9b1c4f40485e74431a0f67"
+  },
+  "_initializer": {
+    "fetchUid": "0ba69947d7471928e6e799ee78a7f13f",
+    "url": "http://localhost:3000/books/6752",
+    "status": 200,
+    "statusText": "OK",
+    "headers": [
+      {
+        "name": "X-Powered-By",
+        "value": "Express"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json; charset=utf-8"
+      },
+      {
+        "name": "Content-Length",
+        "value": "95"
+      },
+      {
+        "name": "ETag",
+        "value": "W/\"5f-kVfORAi3Jp8DV0Ybq7X0eGqIinM\""
+      },
+      {
+        "name": "Date",
+        "value": "Fri, 03 Apr 2026 13:28:28 GMT"
+      },
+      {
+        "name": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "name": "Keep-Alive",
+        "value": "timeout=5"
+      }
+    ]
+  },
+  "_headers": {
+    "_headersMap": {
+      "_map": {}
+    },
+    "_headersArray": [
+      {
+        "name": "X-Powered-By",
+        "value": "Express"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json; charset=utf-8"
+      },
+      {
+        "name": "Content-Length",
+        "value": "95"
+      },
+      {
+        "name": "ETag",
+        "value": "W/\"5f-kVfORAi3Jp8DV0Ybq7X0eGqIinM\""
+      },
+      {
+        "name": "Date",
+        "value": "Fri, 03 Apr 2026 13:28:28 GMT"
+      },
+      {
+        "name": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "name": "Keep-Alive",
+        "value": "timeout=5"
+      }
+    ]
+  }
+}
+GET API Response with params:[
+  {
+    "id": 6752,
+    "author": "Darrin Feil-Stamm",
+    "category": "Drama",
+    "price": 632,
+    "title": "Updated Title"
+  }
+]
+Deleted book with id: 6752

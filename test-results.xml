@@ -1,0 +1,178 @@
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="1.931488">
+<testsuite name="03_POST_API_DynamicTypeSafety.spec.ts" timestamp="2026-04-03T13:28:26.971Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.049" errors="0">
+<testcase name="POST API Request using dynamic file with faker" classname="03_POST_API_DynamicTypeSafety.spec.ts" time="0.049">
+<system-out>
+<![CDATA[Request Body:
+id: 5274
+author: Mitchell Parisian
+category: Detective
+price: 508
+title: The Iliad
+POST API Response:{
+  "id": 5274,
+  "author": "Mitchell Parisian",
+  "category": "Detective",
+  "price": 508,
+  "title": "The Iliad"
+}
+POST API Response Headers:"application/json; charset=utf-8"
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="04_GET_API_ParametersRequest.spec.ts" timestamp="2026-04-03T13:28:26.971Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.041" errors="0">
+<testcase name="POST API Request using dynamic file with faker" classname="04_GET_API_ParametersRequest.spec.ts" time="0.041">
+<system-out>
+<![CDATA[POST API Request and GET API Response using dynamic file with faker
+GET API Response by Hard Code param ID:[
+  {
+    "id": 1293,
+    "author": "Erica Shields",
+    "category": "Classic",
+    "price": 121,
+    "title": "Malone Dies"
+  }
+]
+GET API Response with params ID:[
+  {
+    "id": 1293,
+    "author": "Erica Shields",
+    "category": "Classic",
+    "price": 121,
+    "title": "Malone Dies"
+  }
+]
+GET API Response with params CATEGORY:[
+  {
+    "id": 1293,
+    "author": "Erica Shields",
+    "category": "Classic",
+    "price": 121,
+    "title": "Malone Dies"
+  }
+]
+Deleted book with id: 1293
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="05_PUT_API_Request.spec.ts" timestamp="2026-04-03T13:28:26.971Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.031" errors="0">
+<testcase name="POST API Request using dynamic file with faker" classname="05_PUT_API_Request.spec.ts" time="0.031">
+<system-out>
+<![CDATA[GET API Response:[
+  {
+    "id": 6752,
+    "author": "Darrin Feil-Stamm",
+    "category": "Drama",
+    "price": 632,
+    "title": "The Adventures of Huckleberry Finn"
+  }
+]
+PUT API Response:{
+  "_request": {
+    "_type": "APIRequestContext",
+    "_guid": "request-context@9323e9f17b9b1c4f40485e74431a0f67"
+  },
+  "_initializer": {
+    "fetchUid": "0ba69947d7471928e6e799ee78a7f13f",
+    "url": "http://localhost:3000/books/6752",
+    "status": 200,
+    "statusText": "OK",
+    "headers": [
+      {
+        "name": "X-Powered-By",
+        "value": "Express"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json; charset=utf-8"
+      },
+      {
+        "name": "Content-Length",
+        "value": "95"
+      },
+      {
+        "name": "ETag",
+        "value": "W/\"5f-kVfORAi3Jp8DV0Ybq7X0eGqIinM\""
+      },
+      {
+        "name": "Date",
+        "value": "Fri, 03 Apr 2026 13:28:28 GMT"
+      },
+      {
+        "name": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "name": "Keep-Alive",
+        "value": "timeout=5"
+      }
+    ]
+  },
+  "_headers": {
+    "_headersMap": {
+      "_map": {}
+    },
+    "_headersArray": [
+      {
+        "name": "X-Powered-By",
+        "value": "Express"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json; charset=utf-8"
+      },
+      {
+        "name": "Content-Length",
+        "value": "95"
+      },
+      {
+        "name": "ETag",
+        "value": "W/\"5f-kVfORAi3Jp8DV0Ybq7X0eGqIinM\""
+      },
+      {
+        "name": "Date",
+        "value": "Fri, 03 Apr 2026 13:28:28 GMT"
+      },
+      {
+        "name": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "name": "Keep-Alive",
+        "value": "timeout=5"
+      }
+    ]
+  }
+}
+GET API Response with params:[
+  {
+    "id": 6752,
+    "author": "Darrin Feil-Stamm",
+    "category": "Drama",
+    "price": 632,
+    "title": "Updated Title"
+  }
+]
+Deleted book with id: 6752
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="06_DELETE_API_Request.spec.ts" timestamp="2026-04-03T13:28:26.971Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.012" errors="0">
+<testcase name="POST API Request using dynamic file with faker" classname="06_DELETE_API_Request.spec.ts" time="0.012">
+<system-out>
+<![CDATA[POST API Request using dynamic file with faker
+POST API Response:{
+  "id": 4447,
+  "author": "Francisco Durgan I",
+  "category": "Adventure",
+  "price": 114,
+  "title": "Dune"
+}
+Deleted book with id: 4447
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

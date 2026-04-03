@@ -1,0 +1,14 @@
+Request Body:
+id: 5274
+author: Mitchell Parisian
+category: Detective
+price: 508
+title: The Iliad
+POST API Response:{
+  "id": 5274,
+  "author": "Mitchell Parisian",
+  "category": "Detective",
+  "price": 508,
+  "title": "The Iliad"
+}
+POST API Response Headers:"application/json; charset=utf-8"
