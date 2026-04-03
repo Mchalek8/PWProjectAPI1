@@ -1,9 +1,0 @@
-POST API Request using dynamic file with faker
-POST API Response:{
-  "id": 4447,
-  "author": "Francisco Durgan I",
-  "category": "Adventure",
-  "price": 114,
-  "title": "Dune"
-}
-Deleted book with id: 4447

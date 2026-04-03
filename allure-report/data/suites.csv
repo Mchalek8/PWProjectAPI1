@@ -1,5 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","41","POST API Request using dynamic file with faker","chromium","2026-04-03","passed","2026-04-03","","04_GET_API_ParametersRequest.spec.ts","",""
-"","31","POST API Request using dynamic file with faker","chromium","2026-04-03","passed","2026-04-03","","05_PUT_API_Request.spec.ts","",""
-"","12","POST API Request using dynamic file with faker","chromium","2026-04-03","passed","2026-04-03","","06_DELETE_API_Request.spec.ts","",""
-"","49","POST API Request using dynamic file with faker","chromium","2026-04-03","passed","2026-04-03","","03_POST_API_DynamicTypeSafety.spec.ts","",""
+"","2801","Mock API from HAR file in Playwright","chromium","2026-04-03","passed","2026-04-03","","09_Mock_From_HAR_File.spec.ts","",""
+"","3134","Mock API Request","chromium","2026-04-03","passed","2026-04-03","","07_Mock_API_Request.spec.ts","",""
+"","3120","Mock API Response","chromium","2026-04-03","passed","2026-04-03","","08_Mock_API_Response.spec.ts","",""
