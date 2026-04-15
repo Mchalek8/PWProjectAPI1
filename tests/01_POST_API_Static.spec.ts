@@ -1,26 +1,14 @@
 import { test, expect } from '@playwright/test';
-import { getPOSTAPIRequestBody } from "../src/utils/APIHelper";
-import { generateBookData } from "../src/interface/BookData.interface";
+import postAPIRequest from '../test-data/api_request/01_POST_API_StaticRequest.json';
 
 test.use({
     baseURL: process.env.BASE_API_URL,
 })
 
-test("POST API Request using Safety Type with faker", {tag :['@sanity', '@post']}, async ({ request }) => {
-    // Get data and Print
-    const data = generateBookData();
-    console.log('Request Body:');
-    console.log(`id: ${data.id}`);
-    console.log(`author: ${data.author}`);
-    console.log(`category: ${data.category}`);
-    console.log(`price: ${data.price}`);
-    console.log(`title: ${data.title}`);
-
+test("POST API Request using static file", {tag :['@sanity', '@post']}, async ({ request }) => {    
     // POST API Request
-    // Create POST API Request body
-    const postAPIRequestBody = await getPOSTAPIRequestBody(data); 
     // Create POST API Request Response
-    const postAPIRequestResponse =await request.post(`books`, { data: postAPIRequestBody });
+    const postAPIRequestResponse =await request.post(`books`, { data: postAPIRequest }); 
     // Create json POST API Response
     const jsonPOSTAPIResponse =await postAPIRequestResponse.json();
     console.log('POST API Response:'+JSON.stringify(jsonPOSTAPIResponse, null, 2));
@@ -39,11 +27,11 @@ test("POST API Request using Safety Type with faker", {tag :['@sanity', '@post']
     expect(jsonPOSTAPIResponse).toHaveProperty('title');
 
     // Validate POST API response body
-    expect(jsonPOSTAPIResponse.id).toBe(data.id);
-    expect(jsonPOSTAPIResponse.author).toBe(data.author);
-    expect(jsonPOSTAPIResponse.category).toBe(data.category);
-    expect(jsonPOSTAPIResponse.price).toBe(data.price);
-    expect(jsonPOSTAPIResponse.title).toBe(data.title);
+    expect(jsonPOSTAPIResponse.id).toBe(postAPIRequest.id);
+    expect(jsonPOSTAPIResponse.author).toBe(postAPIRequest.author);
+    expect(jsonPOSTAPIResponse.category).toBe(postAPIRequest.category);
+    expect(jsonPOSTAPIResponse.price).toBe(postAPIRequest.price);
+    expect(jsonPOSTAPIResponse.title).toBe(postAPIRequest.title);
 
     // DELETE record from POST API Request
     // Create json DELETE API Response
@@ -53,5 +41,5 @@ test("POST API Request using Safety Type with faker", {tag :['@sanity', '@post']
 
     // Validate the DELETE response
     expect(deleteAPIResponse.status()).toBe(204); // server returns 204 No Content
-    console.log(`Deleted book with id: ${jsonPOSTAPIResponse.id}`);     
+    console.log(`Deleted book with id: ${jsonPOSTAPIResponse.id}`);    
 })

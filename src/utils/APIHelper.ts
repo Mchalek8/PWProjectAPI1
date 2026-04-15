@@ -1,4 +1,4 @@
-import { Book } from "../../src/interface/BookCreateAPI.interface"; // adjust path if needed
+import { BookData } from "../interface/BookData.interface";
 export async function formatAPIRequest(template: string, values: any[]): Promise<string> {
     return template.replace(/{(\d+)}/g, (match, p1) => {
         const index = parseInt(p1, 10);
@@ -7,18 +7,14 @@ export async function formatAPIRequest(template: string, values: any[]): Promise
 }
 
 export async function getPOSTAPIRequestBody(
-  id: number,
-  author: string,
-  category: string,
-  price: number,
-  title: string,
-): Promise<Book> {
-  const apiRequest: Book = {
-    id: id,
-    author: author,
-    category: category,
-    price: price,
-    title: title,
+  data: BookData
+): Promise<BookData> {
+  const apiRequest: BookData = {
+    id: data.id,
+    author: data.author,
+    category: data.category,
+    price: data.price,
+    title: data.title,
   };
   
   return apiRequest;

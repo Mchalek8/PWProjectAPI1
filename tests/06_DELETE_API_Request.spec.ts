@@ -1,26 +1,19 @@
 //import { test, expect } from "../src/fixtures/fixtures";
 import { test, expect } from '@playwright/test';
 import { getPOSTAPIRequestBody } from "../src/utils/APIHelper";
-import { faker } from "@faker-js/faker";
+import { generateBookData } from "../src/interface/BookData.interface";
 
 test.use({
     baseURL: process.env.BASE_API_URL,
 })
 
-test("POST API Request using dynamic file with faker", {tag :['@sanity', '@delete']}, async ({ request }) => {
-
-    console.log('POST API Request using dynamic file with faker');
-
-    // Request Body values
-    const id = faker.number.int({ min: 101, max: 9999 });
-    const author = faker.person.fullName();
-    const category = faker.book.genre();
-    const price = faker.number.int({ min: 100, max: 699 });
-    const title = faker.book.title();
+test("DELETE API Request after POST for Safety Type", {tag :['@sanity', '@delete']}, async ({ request }) => {
+    // Get and Print Request Body
+    const data = generateBookData();
 
     // POST API Request
     // Create POST API Request body
-    const postAPIRequestBody = await getPOSTAPIRequestBody(id, author, category, price, title); 
+    const postAPIRequestBody = await getPOSTAPIRequestBody(data);
     // Create POST API Request Response
     const postAPIRequestResponse =await request.post(`books`, { data: postAPIRequestBody });
     // Create json POST API Response
