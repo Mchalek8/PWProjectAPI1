@@ -52,4 +52,14 @@ test("POST API Request using dynamic file with faker", {tag :['@regression', '@p
     expect(jsonPOSTAPIResponse.category).toBe(data.category);
     expect(jsonPOSTAPIResponse.price).toBe(data.price.toString());
     expect(jsonPOSTAPIResponse.title).toBe(data.title);
+
+    // DELETE record from POST API Request
+    // Create json DELETE API Response
+    const deleteAPIResponse = await request.delete(`/books`, {
+        params: { id: String(jsonPOSTAPIResponse.id)} // pass ID as String query param
+    });
+
+    // Validate the DELETE response
+    expect(deleteAPIResponse.status()).toBe(204); // server returns 204 No Content
+    console.log(`Deleted book with id: ${jsonPOSTAPIResponse.id}`);    
 })

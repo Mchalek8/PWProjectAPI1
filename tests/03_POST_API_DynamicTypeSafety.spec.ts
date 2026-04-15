@@ -6,7 +6,7 @@ test.use({
     baseURL: process.env.BASE_API_URL,
 })
 
-test("POST API Request using Safety Type with faker", {tag :['@sanity', '@post']}, async ({ request }) => {
+test("POST API Request using Safety Type with faker", {tag :['@regression', '@post']}, async ({ request }) => {
     // Get data and Print
     const data = generateBookData();
     console.log('Request Body:');
@@ -45,13 +45,13 @@ test("POST API Request using Safety Type with faker", {tag :['@sanity', '@post']
     expect(jsonPOSTAPIResponse.price).toBe(data.price);
     expect(jsonPOSTAPIResponse.title).toBe(data.title);
 
-    // DELETE record from POST API Request
-    // Create json DELETE API Response
-    const deleteAPIResponse = await request.delete(`/books`, {
-        params: { id: jsonPOSTAPIResponse.id } // pass ID as query param
-    });
+    // // DELETE record from POST API Request
+    // // Create json DELETE API Response
+    // const deleteAPIResponse = await request.delete(`/books`, {
+    //     params: { id: jsonPOSTAPIResponse.id } // pass ID as query param
+    // });
 
-    // Validate the DELETE response
-    expect(deleteAPIResponse.status()).toBe(204); // server returns 204 No Content
-    console.log(`Deleted book with id: ${jsonPOSTAPIResponse.id}`);     
+    // // Validate the DELETE response
+    // expect(deleteAPIResponse.status()).toBe(204); // server returns 204 No Content
+    // console.log(`Deleted book with id: ${jsonPOSTAPIResponse.id}`);     
 })
